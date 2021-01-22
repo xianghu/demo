@@ -4,6 +4,11 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/*
+1st run
+2nd run, change system preference
+3rd run, add Locale.CHINA in line 31
+ */
 public class Demo3 {
 
     public static void main(String[] args) {
@@ -24,7 +29,6 @@ public class Demo3 {
         BigDecimal money = new BigDecimal("12.3");
         // wrong: depends on system locale
         String moneyString = NumberFormat.getCurrencyInstance().format(money);
-
 //        String moneyString = NumberFormat.getCurrencyInstance(Locale.CHINA).format(money);
         return filter(moneyString);
     }
